@@ -77,5 +77,19 @@ export const fitRequest = defineType({
       initialValue: () => new Date().toISOString(),
       readOnly: true,
     }),
+    defineField({
+        name: "status",
+        title: "Status",
+        type: "string",
+        options: {
+            list: [
+            { title: "New", value: "new" },
+            { title: "Replied", value: "replied" },
+            { title: "Qualified", value: "qualified" },
+            { title: "Not a fit", value: "not-fit" },
+            ],
+        },
+        initialValue: "new",
+        }),
   ],
 });
